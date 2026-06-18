@@ -1,0 +1,24 @@
+{
+  "name": "job-processing-comparison",
+  "version": "1.0.0",
+  "description": "High-performance comparison of Cron-based polling vs Redis-backed queue processing with PostgreSQL advisory locks",
+  "main": "src/services/api.js",
+  "scripts": {
+    "start:api": "node src/services/api.js",
+    "start:cron": "node src/services/cron-worker.js",
+    "start:queue-worker": "node src/services/queue-worker.js",
+    "migrate": "node src/db/migrate.js",
+    "benchmark": "node benchmarking/run-benchmark.js"
+  },
+  "dependencies": {
+    "bullmq": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "ioredis": "^5.3.2",
+    "pg": "^8.11.3",
+    "uuid": "^9.0.0",
+    "@bull-board/api": "^5.10.0",
+    "@bull-board/express": "^5.10.0"
+  }
+}
