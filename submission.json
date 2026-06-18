@@ -1,0 +1,6 @@
+{
+  "api_port": 3000,
+  "test_job_types": ["CRON", "QUEUE"],
+  "db_connection": "DATABASE_URL",
+  "redis_connection": "REDIS_URL"
+}
